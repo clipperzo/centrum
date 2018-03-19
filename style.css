@@ -29,7 +29,7 @@ body{
     padding-left: 25px;
     height: 33px;
     line-height: 33px;
-    background-image: url(login.jpg);
+    background-image: url(images/login.jpg);
     background-repeat: no-repeat;
     background-position: center left;
 }
@@ -62,7 +62,7 @@ body{
 }
 .telephone-contact::before{
     content: '';
-    background-image: url(phone.jpg);
+    background-image: url(images/phone.jpg);
     display: block;
     height: 41px;
     width: 33px;
@@ -101,7 +101,7 @@ input{
     font-size: 12px;
     font-style: italic;
     padding-left: 41px;
-    background-image: url(keyboard.jpg);
+    background-image: url(images/keyboard.jpg);
     background-repeat: no-repeat;
     background-position: center left 15px; /* Patryk */
 }
@@ -124,7 +124,7 @@ input:focus{ /* Patryk */
     float: left;
     height: 100%;
     padding-left: 50px;
-    background-image: url(basket.jpg);
+    background-image: url(images/basket.jpg);
     background-position: center left;
     background-repeat: no-repeat;
     color: var(--darkGreyText);
@@ -160,7 +160,7 @@ input:focus{ /* Patryk */
    
 }
 .drop-down-menu::before{
-    background-image: url(list.jpg);
+    background-image: url(images/list.jpg);
     content: '';
     display: block;
     height: 100%;
@@ -175,7 +175,7 @@ input:focus{ /* Patryk */
     display: block;
     height: 10px;
     width: 15px;
-    background-image: url(arrow.jpg);
+    background-image: url(images/arrow.jpg);
     position: absolute;
     top: 22px;
     left: 240px;
@@ -202,7 +202,7 @@ input:focus{ /* Patryk */
     color: var(--whiteText);   
 }
 .menu-link.home{
-    background-image: url('home.jpg'); /* Patryk */
+    background-image: url(images/'home.jpg'); /* Patryk */
     background-position: center; /* Patryk */
     background-repeat: no-repeat; /* Patryk */
     width: 18px; /* Patryk */
@@ -242,7 +242,7 @@ ul{
     height: 560px;
 }
 .slider{
-    background-image: url(slider.png);
+    background-image: url(images/slider.png);
     background-size: cover;
     background-repeat: no-repeat;
     height: 552px;
@@ -300,15 +300,15 @@ ul{
     font-size: 16px;
 }
 .medal{
-    background-image: url(medal.png);
+    background-image: url(images/medal.png);
     background-repeat: no-repeat;
 }
 .supply{
-    background-image: url(supply.png);
+    background-image: url(images/supply.png);
     background-repeat: no-repeat;
 }
 .padlock{
-    background-image: url(padlock.png);
+    background-image: url(images/padlock.png);
     background-repeat: no-repeat;
 }
 .product-background{
@@ -323,7 +323,7 @@ ul{
     content: "";
     display: block;
     position: absolute;
-    background-image: url(left-arrow.png);
+    background-image: url(images/left-arrow.png);
     height: 25px;
     width: 16px;
     top: 245px;
@@ -333,7 +333,7 @@ ul{
     content: "";
     display: block;
     position: absolute;
-    background-image: url(right-arrow.png);
+    background-image: url(images/right-arrow.png);
     height: 24px;
     width: 16px;
     top: 245px;
@@ -414,7 +414,7 @@ ul{
     font-size: 14px;
     float: right;
     padding-right: 25px;
-    background-image: url(fb.jpg);
+    background-image: url(images/fb.jpg);
     background-repeat: no-repeat;
     background-position: center right;
 } 
@@ -442,7 +442,7 @@ ul{
     content: '';
     display: block;
     position: absolute;
-    background-image: url(phone2.jpg);
+    background-image: url(images/phone2.jpg);
     height: 41px;
     width: 33px;
     top: 30px;
@@ -451,7 +451,7 @@ ul{
 .mail-contact{
     float: left;
     padding-left: 20px;
-    background-image: url(mail.jpg);
+    background-image: url(images/mail.jpg);
     background-repeat: no-repeat;
     background-position: center left;
 }
