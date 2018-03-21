@@ -19,12 +19,12 @@
             <div id="header_top">
                 <div class="inner-container">
                     <div class="logo-header">
-                        <img src="logo.jpg" />
+                        <img src="images/logo.png" />
                     </div>
                     <div class="telephone-container"><!-- Uzyj div z before i after jako background-img. Musisz dopisać wartości content: ''; oraz display: block; Nr telefonu ma być jako a href:akcja dla telefonu  - sprawdz w google "a href phone property" -->
                         <div class="telephone-contact">
                             <span class="telephone-text">Masz pytanie? <b>Zadzwoń</b></span> <br/>
-                            <a href="#" class="phone-number">+48<b> 000 000 000</b></a>
+                            <a href="tel:+48000000000" class="phone-number">+48<b> 000 000 000</b></a>
                         </div>
                     </div>
                     <div class="search-container">
@@ -64,21 +64,32 @@
                 <div class="slider">
                     <div class="inner-container">
                         <div class="slider-text"> <!-- Strzałki -->
-                            <b class="sliderTxt"><span class="color-text">NAJTAŃSZE CZĘŚCI</span><br/>
-                            DO TWOJEGO SAMOCHODU    
-                            </b>
+                           <div class="arrow left">
+                               <button class="leftArrow"></button>
+                           </div> 
+                           <div class="clear"></div>
+                            <div class="headerSlider">
+                                    <b class="sliderTxt"><span class="color-text">NAJTAŃSZE CZĘŚCI</span><br/>
+                                    DO TWOJEGO SAMOCHODU    
+                                    </b>
+                             </div> 
                             <hr class="slider-line" />
                             <div class="clear"></div>
-                            </span class="slider-description">
-                            Lorem ipsum dolor sit amet enim.<br/>
-                            Etiam ullamcorper. Suspendisse<br/>
-                            a pellentesque dui,non felis.
-                            <span>
+                            <div class="DestriptionSlider">
+                                    </span class="slider-description">
+                                    Lorem ipsum dolor sit amet enim.<br/>
+                                    Etiam ullamcorper. Suspendisse<br/>
+                                    a pellentesque dui,non felis.
+                                     <span>
+                            </div>
+                            <div class="arrow right">
+                                <button class="rightArrow"></button>
+                            </div>
                         </div>
                     </div>
                  </div>   
                  <div class="sliderBtn"> <!-- Patryk -->
-                    <button class="slider-btn red"></button>
+                    <button class="slider-btn"></button>
                     <button class="slider-btn"></button>
                     <button class="slider-btn"></button>
                 </div>
@@ -196,7 +207,7 @@
                     </div>
                     <div class="bottomBar">
                         <div class="logo-footer">
-                            <img src="logo2.jpg" />
+                            <img src="images/logo2.png" />
                         </div>
                         <div class="telephone-contact-footer">
                             Masz pytanie? <b>Zadzwoń</b> <br/>
@@ -219,4 +230,3 @@
         </div>
     </body>
 </html>
-<!-- przykładowy tekst -->

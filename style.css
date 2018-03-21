@@ -29,9 +29,10 @@ body{
     padding-left: 25px;
     height: 33px;
     line-height: 33px;
-    background-image: url(login.jpg);
+    background-image: url(images/login.png);
     background-repeat: no-repeat;
     background-position: center left;
+    background-size: 22px;
 }
 
 .register_login{
@@ -48,6 +49,7 @@ body{
 }
 .logo-header img{
     padding-top: 20px;
+    height: 65px;
 }
 .telephone-container{
     float: left;
@@ -62,7 +64,7 @@ body{
 }
 .telephone-contact::before{
     content: '';
-    background-image: url(phone.jpg);
+    background-image: url(images/phone.png);
     display: block;
     height: 41px;
     width: 33px;
@@ -101,9 +103,10 @@ input{
     font-size: 12px;
     font-style: italic;
     padding-left: 41px;
-    background-image: url(keyboard.jpg);
+    background-image: url(images/keyboard.png);
     background-repeat: no-repeat;
     background-position: center left 15px; /* Patryk */
+    background-size: 21px;
 }
 input:focus{ /* Patryk */
     border: 2px solid var(--redText); /* Patryk */
@@ -124,7 +127,7 @@ input:focus{ /* Patryk */
     float: left;
     height: 100%;
     padding-left: 50px;
-    background-image: url(basket.jpg);
+    background-image: url(images/basket.png);
     background-position: center left;
     background-repeat: no-repeat;
     color: var(--darkGreyText);
@@ -160,7 +163,9 @@ input:focus{ /* Patryk */
    
 }
 .drop-down-menu::before{
-    background-image: url(list.jpg);
+    background-image: url(images/list.png);
+    background-size: 17px;
+    background-repeat: no-repeat;
     content: '';
     display: block;
     height: 100%;
@@ -175,7 +180,9 @@ input:focus{ /* Patryk */
     display: block;
     height: 10px;
     width: 15px;
-    background-image: url(arrow.jpg);
+    background-image: url(images/arrow-down.png);
+    background-size: 15px;
+    background-repeat: no-repeat;
     position: absolute;
     top: 22px;
     left: 240px;
@@ -202,7 +209,7 @@ input:focus{ /* Patryk */
     color: var(--whiteText);   
 }
 .menu-link.home{
-    background-image: url('home.jpg'); /* Patryk */
+    background-image: url('images/home.png'); /* Patryk */
     background-position: center; /* Patryk */
     background-repeat: no-repeat; /* Patryk */
     width: 18px; /* Patryk */
@@ -242,7 +249,7 @@ ul{
     height: 560px;
 }
 .slider{
-    background-image: url(slider.png);
+    background-image: url(images/slider.png);
     background-size: cover;
     background-repeat: no-repeat;
     height: 552px;
@@ -255,6 +262,16 @@ ul{
 }
 .sliderTxt{
     font-size: 47px;
+}
+.arrow.left{
+    float: left;
+    height: 22px;
+    width: 14px;
+}
+.leftArrow{
+    background-image: url(images/left-arrow.png);
+    background-repeat: no-repeat;
+
 }
 .slider-line{
     width: 114px;
@@ -276,12 +293,21 @@ ul{
     width: 50px;
     background-color: var(--darkGreyBackground);
     border: none;
+    position: relative;
 }
-.slider-btn.red{
+.slider-btn::before{
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: 0px;
+    left: 0px;
+    width: 0px;
+    height: 5px;
     background-color: var(--redButton);
+    transition: all 200ms ease-in-out;
 }
-.redBtn{
-    background-color: var(--redButton);
+.slider-btn:hover::before{
+    width: 100%;
 }
 
 .info-container{
@@ -293,39 +319,41 @@ ul{
     color: var(--darkGreyText);
     font-size: 14px;
     float: left;
-    padding-left: 75px;
-    padding-right: 100px;
+    padding: 20px 95px;
 }
 .info-title{
     font-size: 16px;
 }
 .medal{
-    background-image: url(medal.png);
+    background-image: url(images/medal.png);
     background-repeat: no-repeat;
+    background-position: center left;
 }
 .supply{
-    background-image: url(supply.png);
+    background-image: url(images/supply.png);
     background-repeat: no-repeat;
+    background-position: center left;
 }
 .padlock{
-    background-image: url(padlock.png);
+    background-image: url(images/padlock.png);
     background-repeat: no-repeat;
+    background-position: center left 18px;
 }
 .product-background{
     background-color: var(--lightGreyBackground);
     height: 518px;
 }
 .product-container{
-    padding: 32px 142px;
+    padding: 32px 110px;
     position: relative;
 }
 .product-container::before{
     content: "";
     display: block;
     position: absolute;
-    background-image: url(left-arrow.png);
-    height: 25px;
-    width: 16px;
+    background-image: url(images/left-arrow.png);
+    height: 22px;
+    width: 14px;
     top: 245px;
     left: 0px;
 }
@@ -333,9 +361,9 @@ ul{
     content: "";
     display: block;
     position: absolute;
-    background-image: url(right-arrow.png);
-    height: 24px;
-    width: 16px;
+    background-image: url(images/right-arrow.png);
+    height: 22px;
+    width: 14px;
     top: 245px;
     right: 0px;
 }
@@ -347,6 +375,18 @@ ul{
     float: left;
     background-color: var(--whiteBackground);
     box-shadow: 0px 4px 10px;
+    margin: 0px 12px;
+    position: relative;
+}
+.product::before{
+    content: '';
+    position: absolute;
+    display: block;
+    background-image: url(images/promocja.png);
+    height: 113px;
+    width: 113px;
+    top: -11px;
+    left: -12px;
 }
 .product-description{
     float: right;
@@ -414,7 +454,7 @@ ul{
     font-size: 14px;
     float: right;
     padding-right: 25px;
-    background-image: url(fb.jpg);
+    background-image: url(images/fb.png);
     background-repeat: no-repeat;
     background-position: center right;
 } 
@@ -442,7 +482,7 @@ ul{
     content: '';
     display: block;
     position: absolute;
-    background-image: url(phone2.jpg);
+    background-image: url(images/phone2.png);
     height: 41px;
     width: 33px;
     top: 30px;
@@ -451,7 +491,7 @@ ul{
 .mail-contact{
     float: left;
     padding-left: 20px;
-    background-image: url(mail.jpg);
+    background-image: url(images/mail.png);
     background-repeat: no-repeat;
     background-position: center left;
 }
@@ -461,5 +501,3 @@ ul{
     height: 69px;
     padding-top: 8px;
 }
-
-/* przykładowy tekst */
