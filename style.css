@@ -17,7 +17,7 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0px;
 }
-.inner-container{
+.inner-container{ /* Zauważ że z reguły w Twoim kodzie w tej klasie masz elementy które są z parametrem css "float", być może zamiast w kodzie html pisać diva z klasą clear wystarczy dla tej klasy dodać after z parametrem clear ;) Może nie  zadziałac wszędzie od razu poprawnie i będziesz musiała porpawić kod html/css w paru miejscach tylko zastanów sie po co pisać 20 diwów z klasą clear jak można dla tego elementu zrobić aftera i uniknąć zbędnych linii struktury kodu html */
     width: 1280px;
     margin: 0px auto;
 }
@@ -32,7 +32,7 @@ body{
     background-image: url(images/login.png);
     background-repeat: no-repeat;
     background-position: center left;
-    background-size: 22px;
+    background-size: 22px; /* Zobacz jak działają parametry contain oraz cover */
 }
 .register_login{
     font-size: 16px; 
@@ -87,13 +87,13 @@ body{
     float: left;
     height: 100%;
 }
-.input-button{
+.input-button{ /* Tam gdzie mozesz uzyskać ten sam efekt poprzez paddingi korzystaj z paddingow a nie z marginesów */
     position: relative;
     width: 438px;
     margin: 30px 50px;
     line-height: 45px;
 }
-input{
+input{ /* Zapomniałaś przetestować input na wprowadzanie tekstu. Mozemy wpisać duzo tekstu ktory w koncu schowa nam sie pod przyciskiem. Dodaj odstęp zeby tak sie nie działo */
     height: 45px;
     width: 100%;
     border: 1px solid var(--border);
@@ -132,7 +132,7 @@ input:focus{ /* Patryk */
     color: var(--darkGreyText);
     font-size: 14px;
 }
-.basket{
+.basket{ /* zbędna klasa i zbędne zagnieżdżenie w html'u */
     padding-top: 23px;
 }
 .your-basket{
@@ -148,12 +148,12 @@ input:focus{ /* Patryk */
     background-color: var(--darkGreyBackground);
     height: 52px;
 }
-.drop-down-menu{
+.drop-down-menu{ /* To jest element klikany więc powinien mieć inny kursor */
     width: 290px;
     height: 52px;
-    line-height: 52px;
+    line-height: 52px; /* Nadaj ten parametr dla głównego parenta a z tąd go usuń przez co dzieci otrzymają go od rodzica - na tym polega kaskadowość styli */
     background-color: var(--redButton);
-    border: none;
+    border: none; /* Skoro praktycznie dla każdego buttona na stronie usuwasz border to czy nie lepiej napisać regułę css usuwającą border nie dla danych klas tylko dla ogólnie znacznika ?? ;) */
     color: var(--whiteText); 
     font-size: 16px; 
     position: relative;
@@ -189,7 +189,7 @@ input:focus{ /* Patryk */
     width: calc(100% - 290px);
     height: 52px;
     padding: 0px; /* Patryk */
-    line-height: 52px;   
+    line-height: 52px;   /* Nadaj ten parametr dla głównego parenta a z tąd go usuń przez co dzieci otrzymają go od rodzica - na tym polega kaskadowość styli */
     text-align: right;  /* Patryk */
 }
 .menu-list{
@@ -232,7 +232,7 @@ input:focus{ /* Patryk */
 .menu-link.promotion{
     background-color: var(--redButton); 
     font-weight: bold; /* Patryk */
-    text-align: center; /* Patryk */
+    text-align: center; /* Zbędny parametr */
 }
 ul{
     margin: 0px;
@@ -251,8 +251,13 @@ ul{
     height: 552px;
     box-shadow: 0px 2px 10px;
 }
-.leftArrow{
-    float: left;
+.slider .inner-container{
+    position: relative; /* Dla strzałki */
+}
+.leftArrow{ /* Zamaiast pisac zduplikowane style dla lewej strzalki i prawej strzalki, stworz wspolna klase ktora ma wspolne parametry a nastepnie dla klasy ktora jest dla lewej strzalki wypisz parametry unikalne dla lewej strzalki a dla prawej unikalne dla prawej strzałki */
+    position: absolute; /* Dla strzałki */
+    top: 50%; /* Dla strzałki */
+    left: 0px; /* Dla strzałki */
     background-image: url(images/left-arrow.png);
     background-repeat: no-repeat;
     height: 22px;

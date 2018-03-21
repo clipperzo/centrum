@@ -9,7 +9,7 @@
             <div class="topBar">
                 <div class="inner-container">
                     <div id="login">
-                        <div class="register_login">
+                        <div class="register_login"> <!-- Ten div jest niepotrzebny, zbędne zagnieżdżenie skoro możesz zrobić to samo w jego parencie -->
                             Zarejestruj się / Zaloguj się
                         </div>
                     </div>
@@ -18,25 +18,25 @@
             </div>
             <div id="header_top">
                 <div class="inner-container">
-                    <div class="logo-header">
-                        <img src="images/logo.png" />
+                    <div class="logo-header"> <!-- logo powinno byc klikane wiec -->
+                        <img src="images/logo.png" /> <!-- znacznik img powinien miec zawsze parametr alt -->
                     </div>
-                    <div class="telephone-container"><!-- Uzyj div z before i after jako background-img. Musisz dopisać wartości content: ''; oraz display: block; Nr telefonu ma być jako a href:akcja dla telefonu  - sprawdz w google "a href phone property" -->
-                        <div class="telephone-contact">
-                            <span class="telephone-text">Masz pytanie? <b>Zadzwoń</b></span> <br/>
-                            <a href="tel:+48000000000" class="phone-number">+48<b> 000 000 000</b></a>
+                    <div class="telephone-container">
+                        <div class="telephone-contact"> <!-- zmien obrazek jako tło dla diva a nie before -->
+                            <span class="telephone-text">Masz pytanie? <b>Zadzwoń</b></span> <br/> <!-- Zamiast "b" oraz "br" uzyj diva lub spana i nadaj mu parametry cssowe -->
+                            <a href="tel:+48000000000" class="phone-number">+48<b> 000 000 000</b></a> <!-- Zamiast "b"  uzyj diva lub spana i nadaj mu parametry cssowe -->
                         </div>
                     </div>
-                    <div class="search-container">
-                        <div class="input-button">
+                    <div class="search-container"> <!-- Opis linijka niżej -->
+                        <div class="input-button"> <!-- Zamiast korzystac z marginesów staraj sie korzystać z paddingow. Zamiast korzystać z dokładnych wartości w px staraj sie korzystać z parametrów "auto" -->
                             <input type="text" placeholder="Wpisz nazwę, numer części lub numer OEM ..." /> <!-- Dla inputa ustaw background-img oraz background pozycja aby dodac klawiaturke. zobacz jakie wlasciwosci ma wartość background-***** - sa ciekawe opcje :) -->
                             <button class="search">Szukaj</button>
                         </div>
                     </div>
                     <div class="basket-container"> <!-- uzyj tutaj tla jako ikonka koszyka, zrob odpowiedni padding z lewej -->
-                        <div class="basket">
-                            <div class="your-basket"><b>Twój koszyk</b></div> 
-                            <hr class="line-busket"/>
+                        <div class="basket"> <!-- To jest niepotrzebne zagnieżdzenie, możesz uzyskać to samo pisząc dla parenta padding -->
+                            <div class="your-basket"><b>Twój koszyk</b></div> <!-- Po co korzystasz z "b" jak mozesz napsiać parametr css ?? -->
+                            <hr class="line-busket"/> <!-- Literówka w nazwie klasy ;) -->
                             Koszyk jest pusty 
                         </div> 
                     </div>
@@ -65,9 +65,9 @@
                     <div class="inner-container">
                         <button class="leftArrow"></button>
                         <div class="slider-text"> <!-- Strzałki -->
-                           <div class="clear"></div>
+                           <div class="clear"></div> <!-- do czego ma to służyć ??? chyba śmiec co nie ?? :) -->
                             <div class="headerSlider">
-                                    <b class="sliderTxt"><span class="color-text">NAJTAŃSZE CZĘŚCI</span><br/>
+                                    <b class="sliderTxt"><span class="color-text">NAJTAŃSZE CZĘŚCI</span><br/> <!-- Zamstąp b i br tagami html np div i dodaj im wlasnosci css -->
                                     DO TWOJEGO SAMOCHODU    
                                     </b>
                              </div> 
@@ -95,7 +95,7 @@
         <div id="content">
             <div class="inner-container">
                 <div class="info-container">
-                    <div id="information" class="medal">
+                    <div id="information" class="medal"> <!-- ID musi byc unikalne na całej stronie. Dane id moze wystąpic tylko 1 raz w obrębie całej strony. ID orac klass moze byc wiele dla danego znacznika -->
                         <b class="info-title"><span class="color-text">Satysfakca</span> lub zwrot </b><br/>
                         Lorem ipsum dolor sit amet enim.<br/>
                         Etiam ullamcorper. Suspendisse<br/>
