@@ -34,7 +34,6 @@ body{
     background-position: center left;
     background-size: 22px;
 }
-
 .register_login{
     font-size: 16px; 
     color: var(--darkGreyText);
@@ -106,7 +105,7 @@ input{
     background-image: url(images/keyboard.png);
     background-repeat: no-repeat;
     background-position: center left 15px; /* Patryk */
-    background-size: 21px;
+    background-size: 21px;   
 }
 input:focus{ /* Patryk */
     border: 2px solid var(--redText); /* Patryk */
@@ -149,7 +148,6 @@ input:focus{ /* Patryk */
     background-color: var(--darkGreyBackground);
     height: 52px;
 }
-
 .drop-down-menu{
     width: 290px;
     height: 52px;
@@ -159,8 +157,7 @@ input:focus{ /* Patryk */
     color: var(--whiteText); 
     font-size: 16px; 
     position: relative;
-    padding: 0px 71px 0px 55px;
-   
+    padding: 0px 71px 0px 55px;   
 }
 .drop-down-menu::before{
     background-image: url(images/list.png);
@@ -241,7 +238,6 @@ ul{
     margin: 0px;
     list-style-type: none;
 }
-
 .clear{
     clear: both;
 }
@@ -255,23 +251,23 @@ ul{
     height: 552px;
     box-shadow: 0px 2px 10px;
 }
+.leftArrow{
+    float: left;
+    background-image: url(images/left-arrow.png);
+    background-repeat: no-repeat;
+    height: 22px;
+    width: 14px;
+    border: none;
+    background-color: transparent;
+}
 .slider-text{
+    float: left;
     font-size: 33px;
     color: var(--whiteText);
     padding: 65px;
 }
 .sliderTxt{
     font-size: 47px;
-}
-.arrow.left{
-    float: left;
-    height: 22px;
-    width: 14px;
-}
-.leftArrow{
-    background-image: url(images/left-arrow.png);
-    background-repeat: no-repeat;
-
 }
 .slider-line{
     width: 114px;
@@ -282,6 +278,15 @@ ul{
 }
 .slider-description{
     font-size: 25px;
+}
+.rightArrow{
+    float: right;
+    background-image: url(images/right-arrow.png);
+    background-repeat: no-repeat;
+    height: 22px;
+    width: 14px;
+    border: none;
+    background-color: transparent;
 }
 .sliderBtn{
     height: 6px;  /* Patryk */
@@ -309,7 +314,6 @@ ul{
 .slider-btn:hover::before{
     width: 100%;
 }
-
 .info-container{
     height: 156px;
     padding-left: 90px;
@@ -344,7 +348,7 @@ ul{
     height: 518px;
 }
 .product-container{
-    padding: 32px 110px;
+    padding: 32px 77px;
     position: relative;
 }
 .product-container::before{
@@ -375,7 +379,7 @@ ul{
     float: left;
     background-color: var(--whiteBackground);
     box-shadow: 0px 4px 10px;
-    margin: 0px 12px;
+    margin: 0px 24px;
     position: relative;
 }
 .product::before{
@@ -423,14 +427,14 @@ ul{
     border: none;
     border-radius: 4px;
     font-size: 16px;
+    transition: all 200ms linear;
 }
-
-
+.price-button:hover{
+    background-color: var(--redButton);
+}
 .color-text{
     color: var(--redText);
 }
-
-
 .footer{
     background-color: var(--darkGreyBackground);
     height: 155px;
@@ -458,7 +462,10 @@ ul{
     background-repeat: no-repeat;
     background-position: center right;
 } 
- 
+ .facebook{
+     text-decoration: none;
+     color: var(--whiteText);
+ }
 .bottomBar{
     color: var(--whiteText);
     font-size: 14px;
@@ -494,6 +501,10 @@ ul{
     background-image: url(images/mail.png);
     background-repeat: no-repeat;
     background-position: center left;
+}
+.mail{
+    text-decoration: none;
+    color: var(--whiteText);
 }
 .footer-information{
     text-align: center;
