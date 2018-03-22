@@ -9,43 +9,37 @@
             <div class="topBar">
                 <div class="inner-container">
                     <div id="login">
-                        <div class="register_login"> <!-- Ten div jest niepotrzebny, zbędne zagnieżdżenie skoro możesz zrobić to samo w jego parencie -->
-                            Zarejestruj się / Zaloguj się
-                        </div>
+                       Zarejestruj się / Zaloguj się
                     </div>
-                    <div class="clear"></div>
                 </div>
             </div>
             <div id="header_top">
                 <div class="inner-container">
-                    <div class="logo-header"> <!-- logo powinno byc klikane wiec -->
-                        <img src="images/logo.png" /> <!-- znacznik img powinien miec zawsze parametr alt -->
-                    </div>
+                    <a href="#"  class="logo-header"> 
+                        <img  alt="logo" src="images/logo.png" /> 
+                    </a>
                     <div class="telephone-container">
-                        <div class="telephone-contact"> <!-- zmien obrazek jako tło dla diva a nie before -->
-                            <span class="telephone-text">Masz pytanie? <b>Zadzwoń</b></span> <br/> <!-- Zamiast "b" oraz "br" uzyj diva lub spana i nadaj mu parametry cssowe -->
-                            <a href="tel:+48000000000" class="phone-number">+48<b> 000 000 000</b></a> <!-- Zamiast "b"  uzyj diva lub spana i nadaj mu parametry cssowe -->
+                        <div class="telephone-contact"> 
+                            Masz pytanie? <span class="telephone-text">Zadzwoń</span>
+                            <a href="tel:+48000000000" class="phone-number">+48<span class="nr"> 000 000 000</span></a> 
                         </div>
                     </div>
                     <div class="search-container"> <!-- Opis linijka niżej -->
-                        <div class="input-button"> <!-- Zamiast korzystac z marginesów staraj sie korzystać z paddingow. Zamiast korzystać z dokładnych wartości w px staraj sie korzystać z parametrów "auto" -->
-                            <input type="text" placeholder="Wpisz nazwę, numer części lub numer OEM ..." /> <!-- Dla inputa ustaw background-img oraz background pozycja aby dodac klawiaturke. zobacz jakie wlasciwosci ma wartość background-***** - sa ciekawe opcje :) -->
+                        <div class="input-button"> <!--  Zamiast korzystać z dokładnych wartości w px staraj sie korzystać z parametrów "auto" -->
+                            <input type="text" placeholder="Wpisz nazwę, numer części lub numer OEM ..." /> 
                             <button class="search">Szukaj</button>
                         </div>
                     </div>
-                    <div class="basket-container"> <!-- uzyj tutaj tla jako ikonka koszyka, zrob odpowiedni padding z lewej -->
-                        <div class="basket"> <!-- To jest niepotrzebne zagnieżdzenie, możesz uzyskać to samo pisząc dla parenta padding -->
-                            <div class="your-basket"><b>Twój koszyk</b></div> <!-- Po co korzystasz z "b" jak mozesz napsiać parametr css ?? -->
-                            <hr class="line-busket"/> <!-- Literówka w nazwie klasy ;) -->
-                            Koszyk jest pusty 
-                        </div> 
-                    </div>
-                    <div class="clear"></div>
+                    <div class="basket-container">  
+                        <div class="your-basket">Twój koszyk</div> 
+                        <hr class="line-basket"/> 
+                         Koszyk jest pusty  
+                    </div>  
                 </div>
             </div>
             <div id="menu_panel">
                     <div class="inner-container">
-                        <button class="drop-down-menu"> <!-- Uzyj a z before i after jako background-img. Musisz dopisać wartości content: ''; oraz display: block; -->
+                        <button class="drop-down-menu"> 
                             Części samochodowe
                         </button>
                         <ul class="header-main-menu">
@@ -56,33 +50,29 @@
                             <li class="menu-list"><a class="menu-link" href="#"> Regulamin </a></li>
                             <li class="menu-list"><a class="menu-link" href="#"> Kontakt </a></li>
                             <li class="menu-list"><a class="menu-link promotion" href="#"> Promocje!</a></li>
-                        </ul>
-                        <div class="clear"></div>
+                        </ul>   
                     </div> 
             </div>
             <div id="slider_container">
                 <div class="slider">
                     <div class="inner-container">
-                        <button class="leftArrow"></button>
-                        <div class="slider-text"> <!-- Strzałki -->
-                           <div class="clear"></div> <!-- do czego ma to służyć ??? chyba śmiec co nie ?? :) -->
+                        <button class=" arrow leftArrow"></button>
+                        <div class="slider-text"> 
                             <div class="headerSlider">
-                                    <b class="sliderTxt"><span class="color-text">NAJTAŃSZE CZĘŚCI</span><br/> <!-- Zamstąp b i br tagami html np div i dodaj im wlasnosci css -->
+                                    <div class="sliderTxt"><div class="color-text">NAJTAŃSZE CZĘŚCI</div>
                                     DO TWOJEGO SAMOCHODU    
-                                    </b>
+                                    </div>
                              </div> 
-                            <hr class="slider-line" />
-                            <div class="clear"></div>
+                            <hr class="slider-line" />  
                             <div class="DestriptionSlider">
-                                    </span class="slider-description">
+                                    <span class="slider-description">
                                     Lorem ipsum dolor sit amet enim.<br/>
                                     Etiam ullamcorper. Suspendisse<br/>
                                     a pellentesque dui,non felis.
-                                     <span>
+                                    </span>
                             </div>
                         </div>
-                        <button class="rightArrow"></button>
-                        <div class="clear"></div>
+                        <button class="arrow rightArrow"></button>     
                     </div>
                  </div>   
                  <div class="sliderBtn"> <!-- Patryk -->
@@ -91,29 +81,28 @@
                     <button class="slider-btn"></button>
                 </div>
             </div>   
-        </div> <!-- przciski przelaczania slidera zrob jako a lub button z wysokoscia, szerokoscia, tlem, i marginedem :) -->
+        </div> 
         <div id="content">
             <div class="inner-container">
                 <div class="info-container">
-                    <div id="information" class="medal"> <!-- ID musi byc unikalne na całej stronie. Dane id moze wystąpic tylko 1 raz w obrębie całej strony. ID orac klass moze byc wiele dla danego znacznika -->
+                    <div class="information medal"> 
                         <b class="info-title"><span class="color-text">Satysfakca</span> lub zwrot </b><br/>
                         Lorem ipsum dolor sit amet enim.<br/>
                         Etiam ullamcorper. Suspendisse<br/>
                         a pellentesque dui,non felis.
                     </div>
-                    <div id="information" class="supply">
+                    <div class="information supply">
                         <b class="info-title"> Dostawa <span class="color-text"> w terminie </span></b><br/>
                         Lorem ipsum dolor sit amet enim.<br/>
                         Etiam ullamcorper. Suspendisse<br/>
                         a pellentesque dui,non felis.
                     </div>
-                    <div id="information" class="padlock">
+                    <div class="information padlock">
                         <b class="info-title"><span class="color-text">Bezpieczne</span> zakupy </b><br/>
                         Lorem ipsum dolor sit amet enim.<br/>
                         Etiam ullamcorper. Suspendisse<br/>
                         a pellentesque dui,non felis.
-                    </div>
-                    <div class="clear"></div>
+                    </div>    
                 </div>
             </div>
             <div class="product-background">
@@ -125,10 +114,9 @@
                                     Mercedes W11 <br/>
                                     E280 CDI
                                 </b>
-                            </div>
-                            <div class="clear"></div>
+                            </div>    
                             <div class="img-product">
-                                    <img src="images/product.png">
+                                    <img alt="produkt" src="images/product.png">
                              </div>  
                             <div class="price">
                                 <span class="promotional-price"> <b>62 PLN</b> </span><br/>
@@ -144,10 +132,9 @@
                                         Mercedes W11 <br/>
                                         E280 CDI
                                     </b>
-                                </div>
-                                <div class="clear"></div>
+                                </div>   
                                 <div class="img-product">
-                                        <img src="images/product.png">
+                                        <img alt="produkt" src="images/product.png">
                                  </div>  
                                 <div class="price">
                                     <span class="promotional-price"> <b>62 PLN</b> </span><br/>
@@ -164,9 +151,8 @@
                                             E280 CDI
                                     </b>
                                 </div>
-                                <div class="clear"></div>
                                  <div class="img-product">
-                                        <img src="images/product.png">
+                                        <img alt="produkt" src="images/product.png">
                                  </div>  
                                 <div class="price">
                                     <span class="promotional-price"> <b>62 PLN</b> </span><br/>
@@ -175,8 +161,7 @@
                                 <div class="check-price">
                                     <button class="price-button"> Sprawdź </button>
                                  </div>
-                        </div>
-                         <div class="clear"></div>
+                        </div>     
                     </div>
                 </div>
             </div>
@@ -194,17 +179,15 @@
                                 <li class="footer-list"><a href="#" class="footer-link"> Regulamin </a></li>
                                 <li class="footer-list"><a href="#" class="footer-link"> Pomoc i FAQ </a></li>
                                 <li class="footer-list"><a href="#" class="footer-link"> Kontakt </a></li>
-                            </ul>
-                            <div class="clear"></div>
+                            </ul>   
                         </div>
                         <div class="social-media">
                            <a href="facebook.com" class="facebook">Znajdź nas na portalach społecznościowych</a>
-                        </div>
-                        <div class="clear"></div>
+                        </div>     
                     </div>
                     <div class="bottomBar">
                         <div class="logo-footer">
-                            <img src="images/logo2.png" />
+                            <img alt="produkt" src="images/logo2.png" />
                         </div>
                         <div class="telephone-contact-footer">
                             Masz pytanie? <b>Zadzwoń</b> <br/>
@@ -212,8 +195,7 @@
                         </div>
                         <div class="mail-contact">
                             <i><a href="mailto: kontakt@centrumczesci.com.pl" class="mail"> kontakt@centrumczesci.com.pl</a></i>
-                        </div>
-                        <div class="clear"></div>
+                        </div>     
                     </div>
                 </div>
             </div>

@@ -17,9 +17,14 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0px;
 }
-.inner-container{ /* Zauważ że z reguły w Twoim kodzie w tej klasie masz elementy które są z parametrem css "float", być może zamiast w kodzie html pisać diva z klasą clear wystarczy dla tej klasy dodać after z parametrem clear ;) Może nie  zadziałac wszędzie od razu poprawnie i będziesz musiała porpawić kod html/css w paru miejscach tylko zastanów sie po co pisać 20 diwów z klasą clear jak można dla tego elementu zrobić aftera i uniknąć zbędnych linii struktury kodu html */
+.inner-container{ 
     width: 1280px;
-    margin: 0px auto;
+    margin: 0px auto; 
+}
+.inner-container::after{
+    content: "";
+    clear: both;
+    display: block;
 }
 .topBar{
     background-color: var(--lightGreyBackground);
@@ -32,9 +37,6 @@ body{
     background-image: url(images/login.png);
     background-repeat: no-repeat;
     background-position: center left;
-    background-size: 22px; /* Zobacz jak działają parametry contain oraz cover */
-}
-.register_login{
     font-size: 16px; 
     color: var(--darkGreyText);
 }
@@ -57,24 +59,18 @@ body{
 }
 .telephone-contact{
     float: right;
-    position: relative;
+    max-width: 155px;
     padding-top: 30px;
     padding-left: 40px;
-}
-.telephone-contact::before{
-    content: '';
     background-image: url(images/phone.png);
-    display: block;
-    height: 41px;
-    width: 33px;
-    position: absolute;
-    top: 32px;
-    left: 0px;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    font-size: 14px;
 }
 .telephone-text{
     color: var(--darkGreyText);
-    font-size: 14px;
-}
+    font-weight: bold;
+}   
 .phone-number{
     text-decoration: none;
     font-size: 18px;
@@ -83,17 +79,22 @@ body{
 .phone-number.footer-phone{
     color: var(--whiteText);
 }
+.nr{
+    font-weight: bold;
+}
 .search-container{
     float: left;
+    width: 538px;
     height: 100%;
 }
-.input-button{ /* Tam gdzie mozesz uzyskać ten sam efekt poprzez paddingi korzystaj z paddingow a nie z marginesów */
+.input-button{ 
     position: relative;
     width: 438px;
-    margin: 30px 50px;
+    margin: 0px auto;
+    padding: 30px 0px;
     line-height: 45px;
 }
-input{ /* Zapomniałaś przetestować input na wprowadzanie tekstu. Mozemy wpisać duzo tekstu ktory w koncu schowa nam sie pod przyciskiem. Dodaj odstęp zeby tak sie nie działo */
+input{ 
     height: 45px;
     width: 100%;
     border: 1px solid var(--border);
@@ -102,10 +103,10 @@ input{ /* Zapomniałaś przetestować input na wprowadzanie tekstu. Mozemy wpisa
     font-size: 12px;
     font-style: italic;
     padding-left: 41px;
+    padding-right: 100px;
     background-image: url(images/keyboard.png);
     background-repeat: no-repeat;
-    background-position: center left 15px; /* Patryk */
-    background-size: 21px;   
+    background-position: center left 15px; /* Patryk */ 
 }
 input:focus{ /* Patryk */
     border: 2px solid var(--redText); /* Patryk */
@@ -114,12 +115,11 @@ input:focus{ /* Patryk */
     width: 92px;
     height: 45px;
     position: absolute;
-    top: 0px;
+    top: 30px;
     right: 0px;
     background-color: var(--redButton);
     font-size: 16px; /* Patryk */
     color: var(--whiteText);
-    border: none;
     border-radius: 0px 3px 3px 0px;
 }
 .basket-container{
@@ -131,14 +131,14 @@ input:focus{ /* Patryk */
     background-repeat: no-repeat;
     color: var(--darkGreyText);
     font-size: 14px;
-}
-.basket{ /* zbędna klasa i zbędne zagnieżdżenie w html'u */
     padding-top: 23px;
+    box-sizing: border-box;
 }
 .your-basket{
     font-size: 18px;
+    font-weight: bold;
 }
-.line-busket{
+.line-basket{
     width: 98px;
     height: 2px;
     background-color: var(--lineBasket);
@@ -147,13 +147,16 @@ input:focus{ /* Patryk */
 #menu_panel{
     background-color: var(--darkGreyBackground);
     height: 52px;
+    line-height: 52px;
 }
-.drop-down-menu{ /* To jest element klikany więc powinien mieć inny kursor */
+button{
+    border: none;
+    cursor: pointer;
+}
+.drop-down-menu{ 
     width: 290px;
     height: 52px;
-    line-height: 52px; /* Nadaj ten parametr dla głównego parenta a z tąd go usuń przez co dzieci otrzymają go od rodzica - na tym polega kaskadowość styli */
     background-color: var(--redButton);
-    border: none; /* Skoro praktycznie dla każdego buttona na stronie usuwasz border to czy nie lepiej napisać regułę css usuwającą border nie dla danych klas tylko dla ogólnie znacznika ?? ;) */
     color: var(--whiteText); 
     font-size: 16px; 
     position: relative;
@@ -189,7 +192,6 @@ input:focus{ /* Patryk */
     width: calc(100% - 290px);
     height: 52px;
     padding: 0px; /* Patryk */
-    line-height: 52px;   /* Nadaj ten parametr dla głównego parenta a z tąd go usuń przez co dzieci otrzymają go od rodzica - na tym polega kaskadowość styli */
     text-align: right;  /* Patryk */
 }
 .menu-list{
@@ -232,7 +234,6 @@ input:focus{ /* Patryk */
 .menu-link.promotion{
     background-color: var(--redButton); 
     font-weight: bold; /* Patryk */
-    text-align: center; /* Zbędny parametr */
 }
 ul{
     margin: 0px;
@@ -252,18 +253,24 @@ ul{
     box-shadow: 0px 2px 10px;
 }
 .slider .inner-container{
-    position: relative; /* Dla strzałki */
+    position: relative; 
 }
-.leftArrow{ /* Zamaiast pisac zduplikowane style dla lewej strzalki i prawej strzalki, stworz wspolna klase ktora ma wspolne parametry a nastepnie dla klasy ktora jest dla lewej strzalki wypisz parametry unikalne dla lewej strzalki a dla prawej unikalne dla prawej strzałki */
-    position: absolute; /* Dla strzałki */
-    top: 50%; /* Dla strzałki */
-    left: 0px; /* Dla strzałki */
-    background-image: url(images/left-arrow.png);
+.arrow{
     background-repeat: no-repeat;
     height: 22px;
     width: 14px;
-    border: none;
     background-color: transparent;
+    position: absolute;
+    top: 50%; 
+    
+}
+.leftArrow{ 
+    background-image: url(images/left-arrow.png);
+    left: 0px; 
+}
+.rightArrow{
+    background-image: url(images/right-arrow.png);
+    right: 0px;
 }
 .slider-text{
     float: left;
@@ -273,25 +280,17 @@ ul{
 }
 .sliderTxt{
     font-size: 47px;
+    font-weight: bold;
 }
 .slider-line{
     width: 114px;
     height: 2px;
+    margin: 16px 0px;
     background-color: var(--darkGreyBackground);
     border: none;
-    float: left;
 }
 .slider-description{
     font-size: 25px;
-}
-.rightArrow{
-    float: right;
-    background-image: url(images/right-arrow.png);
-    background-repeat: no-repeat;
-    height: 22px;
-    width: 14px;
-    border: none;
-    background-color: transparent;
 }
 .sliderBtn{
     height: 6px;  /* Patryk */
@@ -302,7 +301,6 @@ ul{
     height: 5px;
     width: 50px;
     background-color: var(--darkGreyBackground);
-    border: none;
     position: relative;
 }
 .slider-btn::before{
@@ -324,7 +322,7 @@ ul{
     padding-left: 90px;
     padding-top: 65px;
 }
-#information{
+.information{
     color: var(--darkGreyText);
     font-size: 14px;
     float: left;
@@ -429,7 +427,6 @@ ul{
     line-height: 45px;
     width: 112px;
     text-align: center;
-    border: none;
     border-radius: 4px;
     font-size: 16px;
     transition: all 200ms linear;
